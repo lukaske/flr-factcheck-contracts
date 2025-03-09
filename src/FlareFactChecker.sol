@@ -80,13 +80,13 @@ contract FlareFactChecker {
         if (!verifierExists) {
             request.verifiers.push(msg.sender);
         }
+        
+        request.verifierResults[msg.sender] = _result;
+        emit VerificationResultSubmitted(_requestId, msg.sender, _result);
 
         if (request.verifiers.length >= 3) {
             emit ThresholdReached(_requestId, request.verifiers);
         }
-        
-        request.verifierResults[msg.sender] = _result;
-        emit VerificationResultSubmitted(_requestId, msg.sender, _result);
     }
     
     // Comment out onlyAggregator condition for testing
