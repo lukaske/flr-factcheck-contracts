@@ -10,7 +10,7 @@ contract DeployFlareFactChecker is Script {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         
         // Default parameters
-        uint256 verificationFee = 0.01 ether; // Default fee
+        uint256 verificationFee = 1 wei; // Default fee
         address aggregator = address(0);      // Default aggregator
         
         // Try to load fee from environment variable
