@@ -1,0 +1,7 @@
+{
+    "coston2": {
+      "chainId": 114,
+      "url": "https://coston2-api.flare.network/ext/C/rpc",
+      "accounts": ["${PRIVATE_KEY}"]
+    }
+  }
